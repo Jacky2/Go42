@@ -6,7 +6,7 @@ Printf也可以做到输出格式化，当然，对于简单的例子来说足�
 
 Go 官方库提供了两个模板库： text/template 和 html/template 。这两个库类似，当需要输出html格式的代码时需要使用 html/template。
 
-## 35.1 text/template
+## 35.1 text/template <div id="1"></div>
 
 所谓模板引擎，则将模板和数据进行渲染的输出格式化后的字符程序。对于Go，执行这个流程大概需要三步。
 
@@ -124,7 +124,7 @@ var report = template.Must(template.ParseFiles("tmp.txt"))
 ```
 函数Must，它的作用是检测模板是否正确，例如大括号是否匹配，注释是否正确的关闭，变量是否正确的书写。
 
-## 35.2 html/template
+## 35.2 html/template <div id="2"></div>
 
 和text、template类似，html/template主要在提供支持HTML的功能，所以基本使用上和上面差不多，我们来看下面代码：
 
@@ -172,7 +172,7 @@ func main() {
 func(t *Template) ParseFiles(filenames ...string) (*Template, error)
 func(t *Template) ParseGlob(patternstring) (*Template, error)
 ```
-
+{% raw %}
 从上面代码中我们可以看到，通过ParseFile加载了单个Html模板文件。但最终的页面很可能是多个模板文件的嵌套结果。
 
 ParseFiles也支持加载多个模板文件，模板对象的名字则是第一个模板文件的文件名。
@@ -185,6 +185,7 @@ Layout.html，注意在开头根据模板语法，定义了模板名字，define
 注意：通过将模板应用于一个数据结构(即该数据结构作为模板的参数)来执行，来获得输出。模板执行时会遍历结构并将指针表示为.(称之为dot)，指向运行过程中数据结构的当前位置的值。
 
 {{template "header" .}}  嵌套模板中，加入.dot 代表在该模板中也可以使用该数据结构，否则不能显示。
+{% endraw %}
 ```Go
 {{ define "layout" }}
 
@@ -244,9 +245,9 @@ Index
 有关ParseGlob方法，则是通过glob通配符加载模板，例如 t, _ := template.ParseGlob("*.html")
 ```
 
-## 35.3 模板语法
+## 35.3 模板语法 <div id="3"></div>
 
-
+{% raw %}
 【模板标签】
 模板标签用"{{"和"}}"括起来
   
@@ -354,7 +355,7 @@ with结构中，在其它动作中使用定义的变量
  
 {{with $x := "output"}}{{$x | printf "%q"}}{{end}}
 同上，但使用了通道。（等同于：printf("%q", "output")。）
-
+{% endraw %}
 
 
 >本书《Go语言四十二章经》内容在github上同步地址：https://github.com/ffhelicopter/Go42

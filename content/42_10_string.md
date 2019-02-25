@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 10.1 字符串介绍
+## 10.1 字符串介绍 <div id="1"></div>
 
 Go 语言中可以使用反引号或者双引号来定义字符创。反引号表示原生的字符串，即不进行转义。
 
@@ -105,7 +105,7 @@ k：20,v：经 == 32463
 >获取字符串中某个字节的地址的行为是非法的，例如：&str[i]。
 
 
-## 10.2 字符串拼接
+## 10.2 字符串拼接 <div id="2"></div>
 
 可以通过以下方式来对代码中多行的字符串进行拼接。
 * 直接使用运算符
@@ -168,7 +168,7 @@ fmt.Print(b1.String())
 strings.Builder 内部通过 slice 来保存和管理内容。slice 内部则是通过一个指针指向实际保存内容的数组。strings.Builder 同样也提供了 Grow() 来支持预定义容量。当我们可以预定义我们需要使用的容量时，strings.Builder 就能避免扩容而创建新的 slice 了。strings.Builder是非线程安全，性能上和 bytes.Buffer 相差无几。
 
 
-## 10.3 有关string处理
+## 10.3 有关string处理 <div id="3"></div>
 
 标准库中有四个包对字符串处理尤为重要：bytes、strings、strconv和unicode包。
 

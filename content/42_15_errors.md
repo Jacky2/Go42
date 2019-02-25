@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 15.1 错误类型
+## 15.1 错误类型 <div id="1"></div>
 任何时候当你需要一个新的错误类型，都可以用 errors（必须先 import）包的 errors.New 函数接收合适的错误信息来创建，像下面这样：
 
 ```Go
@@ -24,7 +24,7 @@ if f < 0 {
 }
 ```
 
-## 15.2 Panic
+## 15.2 Panic <div id="12"></div>
 
 在Go语言中 panic 是一个内置函数，用来表示非常严重的不可恢复的错误。必须要先声明defer，否则不能捕获到panic异常。普通函数在执行的时候发生panic了，则开始运行defer（如有），defer处理完再返回。
 
@@ -76,7 +76,7 @@ func fields2numbers(fields []string) (numbers []int) {
 }
 ```
 
-## 15.3 Recover：从 panic 中恢复
+## 15.3 Recover：从 panic 中恢复 <div id="3"></div>
 
 正如名字一样，这个（recover）内建函数被用于从 panic 或 错误场景中恢复：让程序可以从 panicking 重新获得控制权，停止终止过程进而恢复正常执行。
 recover 只能在 defer 修饰的函数中使用：用于取得 panic 调用中传递过来的错误值，如果是正常执行，调用 recover 会返回 nil，且没有其它效果。
@@ -96,7 +96,7 @@ func protect(g func()) {
 }
 ```
 
-## 15.4 有关于defer
+## 15.4 有关于defer <div id="4"></div>
 
 说到错误处理，就不得不提defer。先说说它的规则：
 

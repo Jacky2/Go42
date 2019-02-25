@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 22.1 通道(channel)
+## 22.1 通道(channel) <div id="1"></div>
 
 Go 奉行通过通信来共享内存，而不是共享内存来通信。所以，**channel 是goroutine之间互相通信的通道**，goroutine之间可以通过它发消息和接收消息。
 

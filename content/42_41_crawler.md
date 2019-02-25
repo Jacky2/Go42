@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 41.1 go-colly网络爬虫框架
+## 41.1 go-colly网络爬虫框架 <div id="1"></div>
 
 go-colly是用Go实现的网络爬虫框架。go-colly快速优雅，在单核上每秒可以发起1K以上请求；以回调函数的形式提供了一组接口，可以实现任意类型的爬虫。
 
@@ -146,7 +146,7 @@ func (c *Collector) OnHTML(goquerySelector string, f HTMLCallback)
 
 直接在参数中标明了 goquerySelector ，上例中我们有简单尝试。这和我们下面要介绍的goquery HTML解析框架有一定联系，我们也可以使用goquery，通过goquery 来更轻松分析HTML代码。
 
-## 41.2 goquery HTML解析
+## 41.2 goquery HTML解析 <div id="2"></div>
 
 colly框架可以快速发起请求，接收服务器响应。但如果我们需要分析返回的HTML代码，这时候仅仅使用colly就有点吃力。而goquery库是一个使用Go语言写成的HTML解析库，功能更加强大。
 

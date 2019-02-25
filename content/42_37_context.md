@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 37.1 context包
+## 37.1 context包 <div id="1"></div>
 
 在Go中，每个请求的request在单独的goroutine中进行，处理一个request也可能涉及多个goroutine之间的交互。一个请求衍生出的各个 goroutine 之间需要满足一定的约束关系，以实现一些诸如有效期，中止routine树，传递请求全局变量之类的功能。于是Go为我们提供一个解决方案，标准context包。使用context可以使开发者方便的在这些goroutine之间传递request相关的数据、取消goroutine的signal或截止时间等。
 
@@ -101,7 +101,7 @@ Context能灵活地存储不同类型、不同数目的值，并且使多个协�
 
 在子Context被传递到的goroutine中，应该对该子Context的Done通道（channel）进行监控，一旦该通道被关闭（即上层运行环境撤销了本goroutine的执行），应主动终止对当前请求信息的处理，释放资源并返回。
 
-## 37.2 context应用
+## 37.2 context应用 <div id="2"></div>
 
 前面介绍协程(goroutine)时，对协程的管理和控制我们并没有进行讨论。到目前我们已经清楚认识了channel、context以及sync包，通过这三者，我们完全可以达到完美控制协程运行的目的。
 

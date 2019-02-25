@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 28.1 unsafe 包
+## 28.1 unsafe 包 <div id="1"></div>
 
 ```Go
 func Alignof(x ArbitraryType) uintptr
@@ -32,7 +32,7 @@ func Sizeof(x ArbitraryType) uintptr
 
 unsafe中，通过ArbitraryType 、Pointer 这两个类型，可以将其他类型都转换过来，然后通过这三个函数，分别能取长度，偏移量，对齐字节数，就可以在内存地址映射中，来回游走。
 
-## 28.2 指针运算
+## 28.2 指针运算 <div id="2"></div>
 
 uintptr这个基础类型，在Go 语言中，字节长度是与int一致。通常Pointer不能参与指针运算，比如你要在某个指针地址上加上一个偏移量，Pointer是不能做这个运算的，那么谁可以呢？这里要靠uintptr类型了，只有将Pointer类型先转换成uintptr类型，做完地址加减法运算后，再转换成Pointer类型，通过*操作达到取值、修改值的目的。
 

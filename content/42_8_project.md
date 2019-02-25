@@ -2,7 +2,7 @@
 
 作者：李骁
 
-## 8.1 项目结构
+## 8.1 项目结构 <div id="1"></div>
 Go的工程项目管理非常简单，使用目录结构和package名来确定工程结构和构建顺序。
 
 环境变量GOPATH在项目管理中非常重要，想要构建一个项目，必须确保项目目录在GOPATH中。而GOPATH可以有多个项目用";"分隔。
@@ -41,7 +41,7 @@ main.go 文件中定义了package main 。同时也在文件中import了
 
 当我们运行go install main.go 会在GOPATH的bin 目录中生成可执行文件。
 
-## 8.2 使用 Godoc
+## 8.2 使用 Godoc <div id="2"></div>
 
 在程序中我们一般都会注释，如果我们按照一定规则，Godoc 工具会收集这些注释并产生一个技术文档。
 
@@ -93,7 +93,7 @@ func NewWriter(w io.Writer) * Writer {
 ![godoc.png](https://github.com/ffhelicopter/Go42/blob/master/content/img/godoc.png)
 
 
-## 8.3 Go程序的编译
+## 8.3 Go程序的编译 <div id="3"></div>
 
 如果想要构建一个程序，则包和包内的文件都必须以正确的顺序进行编译。包的依赖关系决定了其构建顺序。
 
